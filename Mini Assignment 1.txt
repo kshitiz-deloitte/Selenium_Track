@@ -1,0 +1,25 @@
+Problem 1 solution- 
+●	PHPTRAVLES Logo  -> //div[@class='logo']   
+			/html/body/header/div[2]/div/div/div/div/div[1]
+●	Home		-> //a[contains(text(),'Home')]   
+			/html/body/header/div[2]/div/div/div/div/div[2]/nav/ul/li[1]/a
+●	Flights 	-> //a[contains(text(),'flights')]   
+			/html/body/header/div[2]/div/div/div/div/div[2]/nav/ul/li[3]/a
+●	Tours		-> //a[contains(text(),'Tours')]    
+			/html/body/header/div[2]/div/div/div/div/div[2]/nav/ul/li[4]/a
+●	Company		-> //li[@class='footm']//a[@class=' waves-effect']   
+			/html/body/header/div[2]/div/div/div/div/div[2]/nav/ul/li[8]/a
+●	Signup Btn	-> //a[@class='theme-btn theme-btn-small waves-effect']  
+			/html/body/header/div[1]/div/div/div[2]/div/div/a[1]
+●	Login Btn	-> //a[@class='theme-btn theme-btn-small theme-btn-transparent ml-1 waves-effect']    
+			/html/body/header/div[1]/div/div/div[2]/div/div/a[2]
+●	Agents DropDown	-> //div[@class='header-right-action pt-1 pe-2 b2b_agents']//div[@class='dropdown']   
+			/html/body/header/div[1]/div/div/div[2]/div/div/div[4]/div
+
+Problem 2 solution- 
+●	Check in - Calendar Icon  -> //div[@class='col-md-6']//child::span[contains(text(),'Checkin')]//following-sibling::div//child::span
+●	Check Out – Calendar Icon  -> //input[@id='checkout']//preceding-sibling::span
+●	“- ” for Adults  -> //input[@id='adults']//preceding-sibling::div
+●	“+” for Adults	-> //input[@id='adults']//following-sibling::div
+●	“-“ for Childs	-> //input[@id='chlids']//preceding-sibling::div
+●	“+” for Childs  -> //input[@id='childs']//following-sibling::div
