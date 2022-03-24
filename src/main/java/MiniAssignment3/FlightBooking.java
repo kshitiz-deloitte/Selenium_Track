@@ -62,13 +62,7 @@ public class FlightBooking {
         driver.findElement(By.xpath("//span[contains(text(),\"SEARCH FLIGHTS\")]")).click();
         TakesScreenshot scrShot =((TakesScreenshot)driver);
         File srcFile=scrShot.getScreenshotAs(OutputType.FILE);
-
-
-        //Move image file to new destination
-
         File destFile=new File("test.png");
-
-
         FileHandler.copy(srcFile, destFile);
         driver.findElements(By.xpath("//button[contains(text(),\"BOOK\")]")).get(0).click();
         Thread.sleep(3000);
