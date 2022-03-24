@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.Scanner;
 
 
-public class MiniAssignment2 {
+public class MiniAssignment2  {
     private static WebDriver driver;
     private static ChromeOptions options;
     public static void main(String[] args) throws InterruptedException {
