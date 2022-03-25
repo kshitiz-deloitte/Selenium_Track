@@ -1,11 +1,15 @@
 package MiniAssignment4;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage {
     WebDriver driver;
+    String TAG = "LoginPage";
+    Logger log = LogManager.getLogger(LoginPage.class.getName());
     By username = By.xpath("//input[@id=\"user-name\"]");
     By password = By.xpath("//input[@id=\"password\"]");
     By loginBtn = By.xpath("//input[@id=\"login-button\"]");
@@ -16,7 +20,7 @@ public class LoginPage {
     }
      public void enterUsername(String user){
          WebElement userElement = driver.findElement(username);
-         System.out.println(user);
+         log.error("In "+TAG+ ":Username= "+ username);
          userElement.sendKeys(user);
      }
     public void enterPassword(String pass){

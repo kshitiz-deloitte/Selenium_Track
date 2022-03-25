@@ -1,4 +1,6 @@
 import MiniAssignment4.*;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -9,6 +11,7 @@ import org.testng.annotations.Test;
 import java.io.FileNotFoundException;
 
 public class SwagLabsTest {
+    Logger log;
     WebDriver driver;
     LoginPage loginPage;
     MainPage mainPage;
@@ -20,6 +23,7 @@ public class SwagLabsTest {
     public void setup(){
         System.setProperty("webdriver.chrome.driver", "C:\\Software\\Selenium\\Chrome Driver\\chromedriver.exe");
         driver = new ChromeDriver();
+        log = LogManager.getLogger(SwagLabsTest.class.getName());
         driver.get(url);
     }
 
@@ -115,14 +119,8 @@ public class SwagLabsTest {
 
     }
 
-
-
-
-
-
     @AfterMethod
     public void afterMethod() throws Throwable {
-        System.out.println("in after method");
         if(!condition)
         {
             afterClass();
@@ -131,7 +129,6 @@ public class SwagLabsTest {
 
     @AfterClass
     public void afterClass() throws Throwable {
-        System.out.println("in after class ");
         driver.quit();
         System.exit(0);
     }
